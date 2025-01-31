@@ -157,13 +157,13 @@
         </div>
         <div class="card">
             <h3>DATA SISWA SMK</h3>
-            <a href="data-siswa.php">CLICK NOW</a>
+            <a href="">CLICK NOW</a>
         </div>
         <div class="card">
             <h3>JUMLAH PENABUNG</h3>
         </div>
         <div class="card">
-            <h3>PANDUAN APLIKASI DOM-SAN</h3>
+            <h3>TAMBAH ADMIN</h3>
             <a href="#">CLICK NOW</a>
         </div>
         <button class="logout-button"><a href="logout.php">Logout</a></button>
