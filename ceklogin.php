@@ -16,7 +16,7 @@
         $_SESSION['role'] = $data['role'];
 
         if( $_SESSION['role']==1){
-            header('location:index1.php');
+            header('location:index.php');
         }else{
             header('location:index2.php');
         }
