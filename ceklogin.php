@@ -13,11 +13,18 @@
     if($jml > 0) {
         $_SESSION['username'] = $data['username'];
         $_SESSION['password'] = $data['password'];
+        $_SESSION['role'] = $data['role'];
 
-        header('location:index.php');
+        if( $_SESSION['role']==1){
+            header('location:index1.php');
+        }else{
+            header('location:index2.php');
+        }
+
+        
     }else {
         echo "<p align='center'>Login Gagal!</p>";
-        echo "<meta http-equiv='refresh' content='2; url=login.php'>";
+        echo "<meta http-equiv='refresh' content='1; url=login.php'>";
     }
 
 ?>
