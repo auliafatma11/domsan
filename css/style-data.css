@@ -7,8 +7,9 @@ body {
 
 .logo img {
     width: 180px;
-    display: block;
+    display :block;
     margin: auto;
+    justify-content: center;
 }
 .navbar {
     display: flex;
@@ -134,3 +135,4 @@ th {
     border-radius: 7px;
     margin-bottom: 10px;
 }
+
