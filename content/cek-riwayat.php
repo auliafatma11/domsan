@@ -20,7 +20,7 @@ if(!defined('INDEX')) die("");
         <div class="navbar">
             <a href="?hal=dashboard">Dashboard</a>
             <a href="?hal=data">Data Siswa</a>
-            <a href="?hal=cek-riwayat">Cek Riwayat Nasabah</a>
+            <a href="?hal=riwayat">Cek Riwayat Nasabah</a>
         </div>
         <h1>Riwayat Nasabah</h1>
         <div class="search">
@@ -51,6 +51,7 @@ if(!defined('INDEX')) die("");
                         <td>
                             Membayar keperluan pondok</td>
                             <td class="bank-buttons">  <a href="" class="btn-hapus">hapus</a></td>
+                          
                         
                     </tr>
                     <!-- Tambahkan baris lain sesuai kebutuhan -->

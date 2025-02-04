@@ -26,8 +26,7 @@
 
 </head>
 <body>
-
-
+    
     <?php include 'konten.php'; ?>
 
     <div class="bank">

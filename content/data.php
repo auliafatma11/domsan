@@ -21,10 +21,10 @@
         <div class="navbar">
             <a href="?hal=dashboard">Dashboard</a>
             <a href="?hal=data">Data Siswa</a>
-            <a href="?hal=riwayat">Cek Riwayat Nasabah</a>
+            <a href="?hal=cek-riwayat">Cek Riwayat Nasabah</a>
         </div>
         <h1>Data Siswa</h1>
-<a href="#" class="add-button">+</a>
+<a href="?hal=data_tambah" class="add-button">+</a>
 <div class="search">
     <input type="text" placeholder="Search">
 </div>
@@ -43,23 +43,36 @@
             </tr>
         </thead>
         <tbody>
+            <?php
+                $query= "SELECT * FROM data_siswa";
+
+                $result= mysqli_query($con,$query);
+                $no= 0;
+
+                while($data = mysqli_fetch_assoc($result)) {
+                    $no++;
+            ?>
             <tr>
-                <td>1</td>
-                <td><img src="profile1.jpg" alt="Foto" width="40"></td>
-                <td>Devinda Amelia</td>
-                <td>10</td>
-                <td>10</td>
-                <td>150,000.00</td>
+                <td><?=$no;?></td>
+                <td><img src=images/<?=$data['foto']?> width="40"></td>
+                <td><?=$data=['nama_siswa']?></td>
+                <td><?=$data=['no_induk']?></td>
+                <td><?=$data=['kelas']?></td>
+                <td><?=$data=['saldo']?></td>
                 <td class="bank-buttons">
-                    <button class="btn-tarik">Tarik</button>
-                    <button class="btn-tabung">Tabung</button>
-                    <button class="btn-riwayat">Riwayat</button>
+                    <a href="?hal=tarik_saldo&id=<?=$data=['id_siswa']?>" class="btn-tarik">Tarik</a>
+                    <a href="?hal=tabung_saldo&id=<?=$data=['id_siswa']?>" class="btn-tabung">Tabung</a>
+                    <a href="?hal=riwayat&id=<?=$data=['id_siswa']?>" class="btn-riwayat">Riwayat</a>
                 </td>
                 <td class="action-buttons">
-                    <button class="btn-edit">Edit</button>
-                    <button class="btn-hapus">Hapus</button>
+                    <a href="?hal=data_edit&id=<?=$data['id_siswa']?>" class="btn-edit">Edit</a>
+                    <a href="?hal=data_hapus&id=<?=$data['id_siswa']?>" class="btn-hapus">Hapus</a>
+                    
                 </td>
             </tr>
+            <?php
+                }
+            ?>
         </tbody>
     </table>
 </div>

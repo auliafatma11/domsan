@@ -4,7 +4,17 @@
     $halaman = [
         "dashboard",
         "data",
-        "riwayat"
+        "cek-riwayat",
+        "data_tambah",
+        "data_insert",
+        "data_edit",
+        "data_update",
+        "data_hapus",
+        "riwayat",
+        "riwayat_tambah",
+        "riwayat_insert",
+        "riwayat_hapus"
+        
     ];
 
     if(isset($_GET['hal'])) {

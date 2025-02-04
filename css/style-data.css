@@ -7,9 +7,8 @@ body {
 
 .logo img {
     width: 180px;
-    display :block;
+    display: flex;
     margin: auto;
-    justify-content: center;
 }
 .navbar {
     display: flex;
@@ -76,33 +75,37 @@ th {
     color: black;
 }
 
-.bank-buttons button {
+.bank-buttons a {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 7px;
     cursor: pointer;
-    margin: 0 0.2rem;
+    margin: 0 0.02rem;
     color: white; 
+    text-decoration: none;
+    display: inline-block; /* Agar tetap berbentuk tombol */
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
-.action-buttons button {
+.action-buttons a {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 7px;
     cursor: pointer;
-    margin: 0 0.2rem;
+    margin: 0 0.02rem;
     color: white;
+    text-decoration: none;
+    display: inline-block; /* Agar tetap berbentuk tombol */
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
-.btn-tarik {
-    background-color: #5CCEFF;
-}
-
-.btn-tabung {
-    background-color: #5CCEFF;
-}
-
-.btn-riwayat {
+.btn-tarik, .btn-tabung, .btn-riwayat{
     background-color: #5CCEFF;
 }
 
