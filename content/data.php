@@ -45,7 +45,6 @@
         <tbody>
             <?php
                 $query= "SELECT * FROM data_siswa";
-
                 $result= mysqli_query($con,$query);
                 $no= 0;
 
@@ -54,7 +53,7 @@
             ?>
             <tr>
                 <td><?=$no;?></td>
-                <td><img src=images/<?=$data['foto']?> width="40"></td>
+                <td><img src=images/<?=$data['foto']?> width="100"></td>
                 <td><?=$data=['nama_siswa']?></td>
                 <td><?=$data=['no_induk']?></td>
                 <td><?=$data=['kelas']?></td>
