@@ -24,12 +24,13 @@ body {
     margin-bottom: 30px;
 }
 
-.title {
+h1 .title {
     margin-top: 10px;
     margin-bottom: 55px;
     font-size: 20px;
     font-weight: semi-bold;
     font-style: italic;
+    text-align: center;
 }
 
 .dashboard {

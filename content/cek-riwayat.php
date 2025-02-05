@@ -7,20 +7,18 @@ if(!defined('INDEX')) die("");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM-$AN Riwayat</title>
+    <title>Riwayat</title>
      <!-- Favicon-->
      <link rel="icon" type="image/x-icon"  sizes="64x64" href="logo/dom-san.png" />
      <link href="css/style-riwayat.css" rel="stylesheet" />
 </head>
 <body>
-<div class="logo">
-            <img src="logo/dom-san.png" alt="logo">
-        </div>
-    <div class="container">
+
+    <div class="container" style="background-image: url('logo/1.png');">
         <div class="navbar">
             <a href="?hal=dashboard">Dashboard</a>
             <a href="?hal=data">Data Siswa</a>
-            <a href="?hal=riwayat">Cek Riwayat Nasabah</a>
+            <a href="?hal=cek-riwayat">Cek Riwayat Nasabah</a>
         </div>
         <h1>Riwayat Nasabah</h1>
         <div class="search">

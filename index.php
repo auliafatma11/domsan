@@ -6,7 +6,7 @@
 
     if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
         echo "<p align='center'>Anda harus login terlebih dahulu!</p>";
-        echo "<meta http-equiv='refresh' content='0.1; url=login.php'>";
+        echo "<meta http-equiv='refresh' content='0.1; url=landing.php'>";
     }else {
         define('INDEX', true);
     
@@ -23,9 +23,13 @@
      <link href="css/style-index.css" rel="stylesheet" />
      <link href="css/style-data.css" rel="stylesheet" />
      <link href="css/style-riwayat.css" rel="stylesheet" />
+     <link href="css/style-data_tambah.css" rel="stylesheet" />
 
 </head>
 <body>
+    <header class="header">
+    <img src="logo/dom-san.png" alt="Logo DOM-SAN" class="logo">
+    </header>
     
     <?php include 'konten.php'; ?>
 

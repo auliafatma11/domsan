@@ -40,7 +40,6 @@ body {
 }
 
 .container {
-    background-image: url('logo/1.png');
     background-size: 500px;
     background-position: center;
     background-repeat: no-repeat; 
@@ -51,7 +50,9 @@ body {
     margin-bottom: 10px;
 }
 
-
+ h1 .header {
+    text-align: left;
+}
 
 
 .table-wrapper {
@@ -68,16 +69,15 @@ th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
+ 
 }
 
 th {
     background-color: #d9d9d9;
     color: black;
 }
-
 .bank-buttons a {
     padding: 0.5rem 1rem;
-    border: none;
     border-radius: 7px;
     cursor: pointer;
     margin: 0 0.02rem;
@@ -92,7 +92,6 @@ th {
 
 .action-buttons a {
     padding: 0.5rem 1rem;
-    border: none;
     border-radius: 7px;
     cursor: pointer;
     margin: 0 0.02rem;
@@ -102,7 +101,6 @@ th {
     font-size: 14px;
     padding: 5px 8px;
     border-radius: 3px;
-    text-decoration: none;
 }
 
 .btn-tarik, .btn-tabung, .btn-riwayat{
@@ -120,6 +118,7 @@ th {
 .search {
     display: flex;
     justify-content: flex-end;
+    outline-offset: -2px;
 
 }
 
@@ -137,5 +136,6 @@ th {
     text-decoration: none;
     border-radius: 7px;
     margin-bottom: 10px;
+    float: left;
 }
 

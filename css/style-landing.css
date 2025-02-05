@@ -10848,16 +10848,16 @@ body {
   border-radius: 10rem;
 }
 
-hr.divider {
+hr.divide {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
-  background-color: #ef2a39;
+  background-color: #5CCEFF;
   opacity: 1;
 }
 
 hr.divider-light {
-  background-color: #fff;
+  background-color: #5CCEFF;
 }
 
 #mainNav {

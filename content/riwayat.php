@@ -13,10 +13,8 @@ if(!defined('INDEX')) die("");
      <link href="css/style-riwayat.css" rel="stylesheet" />
 </head>
 <body>
-<div class="logo">
-            <img src="logo/dom-san.png" alt="logo">
-        </div>
-    <div class="container">
+
+    <div class="container" style="background-image: url('logo/1.png');">
         <div class="navbar">
             <a href="?hal=dashboard">Dashboard</a>
             <a href="?hal=data">Data Siswa</a>
