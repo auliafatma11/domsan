@@ -66,7 +66,7 @@
                 </td>
                 <td class="action-buttons">
                     <a href="?hal=data_edit&id=<?=$data['id_siswa']?>" class="btn-edit">Edit</a>
-                    <a href="?hal=data_hapus&id=<?=$data['id_siswa']?>" class="btn-hapus">Hapus</a>
+                    <a href="?hal=data_hapus&id=<?=$data['id_siswa']?>&foto=<?=$data['foto']?>" class="btn-hapus">Hapus</a>
                     
                 </td>
             </tr>
