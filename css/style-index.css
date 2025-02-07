@@ -16,6 +16,20 @@ body {
     width: 130px;
 }
 
+/* Mengatur layout pada layar kecil (responsive) */
+@media (max-width: 700px){
+    .dashboard{
+        flex-direction: column;
+    }
+}
+
+/* Membuat tampilan form menumpuk pada layar kecil */
+@media (max-width: 700px){
+    .form-group label, .form-group input{
+        width: 100%;
+    }
+}
+
 .garis-horizontal {
     border-top: 10px solid #fff;
     border-radius: 10px;
@@ -24,7 +38,7 @@ body {
     margin-bottom: 30px;
 }
 
-h1 .title {
+h2 .title {
     margin-top: 10px;
     margin-bottom: 55px;
     font-size: 20px;
@@ -79,11 +93,12 @@ h1 .title {
     margin: 0 10px; 
 }
 footer{
-background: #ccc;
-color: #555;
-padding: 20px;
-text-align: center;
-margin-bottom: 0;
+    width: 100%;
+    background: #ccc;
+    color: #555;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .logout-button {

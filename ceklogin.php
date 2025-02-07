@@ -19,12 +19,11 @@
             header('location:index.php');
         }else{
             header('location:index2.php');
-        }
-
-        
+        }   
     }else {
-        echo "<p align='center'>Login Gagal!</p>";
-        echo "<meta http-equiv='refresh' content='1; url=login.php'>";
+        echo "<script>alert('Login Gagal!.'); window.location='login.php';</script>";
+        exit();
     }
 
 ?>
+

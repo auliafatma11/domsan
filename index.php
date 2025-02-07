@@ -5,10 +5,18 @@
     include "library/config.php";
 
     if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
-        echo "<p align='center'>Anda harus login terlebih dahulu!</p>";
-        echo "<meta http-equiv='refresh' content='0.1; url=landing.php'>";
+        echo "<script>alert('Anda harus login terlebih dahulu!.'); window.location='landing.php';</script>";
+        exit();
     }else {
         define('INDEX', true);
+
+
+    // Cek apakah user login dan memiliki role admin
+    if (!isset($_SESSION['username']) || $_SESSION['role'] !== '1') {
+        echo "<script>alert('Akses ditolak! Anda bukan admin.'); window.location='login.php';</script>";
+        exit();
+}
+
     
 ?>
 
@@ -23,7 +31,7 @@
      <link href="css/style-index.css" rel="stylesheet" />
      <link href="css/style-data.css" rel="stylesheet" />
      <link href="css/style-riwayat.css" rel="stylesheet" />
-     <link href="css/style-data_tambah.css" rel="stylesheet" />
+     <!-- <link href="css/data_tambah2.css" rel="stylesheet" /> -->
 
 </head>
 <body>
@@ -37,7 +45,7 @@
         <img src="logo/bmd.png" alt="Logo BMD Syariah">
         <img src="logo/bsi.png" alt="Logo Bank Syariah Indonesia">
     </div>
-    <a href="logout.php" class="logout-button">Logout</a>
+    
     <footer>
         Copyright &copy;  <b>By Kelompok 2</b>
     </footer>

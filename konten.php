@@ -14,7 +14,6 @@
         "riwayat_tambah",
         "riwayat_insert",
         "riwayat_hapus"
-        
     ];
 
     if(isset($_GET['hal'])) {

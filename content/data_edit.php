@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data</title>
+    <title>Dompet Santri</title>
     <link rel="stylesheet" href="css/data_tambah2.css">
 
 </head>
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             <label>No. Induk</label>
-            <input type="number" name="no_induk" id="no_induk" required>
+            <input type="number" name="no_induk" id="na_induk" required>
         </div>
         <div class="form-group">
             <label>Kelas</label>
@@ -31,6 +31,10 @@
                 <option value="11"> 11 </option>
                 <option value="12"> 12 </option>
             </select>   
+        </div>
+        <div class="form-group">
+            <label>Saldo</label>
+            <input type="number" name="saldo" id="saldo" required>
         </div>
         <div class="buttons">
             <input type="submit" value="Simpan" class="btn-save"></a>

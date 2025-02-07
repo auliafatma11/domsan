@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+}
+.container {
+    width: 99%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.profile {
+    text-align: left;
+    width: 220px;
+    background: #5CCEFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 30%;
+}
+.saldo {
+    width: 150px;
+    background: #5CCEFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 30%;
+}
+.garis-horizontal {
+    border-top: 5px solid #5cceff;
+    border-radius: 10px;
+    width: 55%;
+    margin-left: 44%;
+    margin-bottom: 10px;
+}
+.pendahuluan {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    background: #5CCEFF;
+    border-radius: 10px;
+}
+.pendahuluan h4 {
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: left;
+    margin-left: 20%;
+}
+.pendahuluan p {
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    text-indent: 30px;
+    text-align: left;
+    width: 70%;
+}
+.pendahuluan img{
+    align-items: center;
+    width: 110px;
+    padding: 0;
+    margin-right: 70px;
+    border-radius: 5px;
+}
+.riwayat {
+    border-top: 25px solid #f2f2f2;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.partners {
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    background: #f2f2f2;
+    padding: 5px;
+    margin-top: 110px;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.partners img {
+    width: 150px;
+    border-radius: 10px;
+}
+footer{
+background: #ccc;
+color: #555;
+padding: 15px;
+text-align: center;
+margin-top: 5px;
+margin-bottom: 1px;
+}
+
+/* Mengatur layout pada layar kecil (responsive) */
+@media (max-width: 700px){
+    .pendahuluan{
+        flex-direction: column;
+    }
+}
+@media (max-width: 700px){
+    .container{
+        flex-direction: column;
+    }
+}
+
+.logout-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #5CCEFF;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.logout-button {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+}
+
+.logout-button:hover {
+    background: darkred;
+}
+

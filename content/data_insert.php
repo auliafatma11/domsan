@@ -10,7 +10,6 @@ $ukuran = $_FILES['foto']['size'];
 $nama = $_POST['nama'];
 $no_induk= $_POST['no_induk'];
 $kelas= $_POST['kelas'];
-$saldo= $_POST['saldo'];
 
 $error = "";
 
@@ -20,7 +19,7 @@ if($foto == ""){
     $query .= "nama = '$nama', ";
     $query .= "no_induk = '$no_induk', ";
     $query .= "kelas = '$kelas', ";
-    $query .= "saldo = '$saldo'";
+    $query .= "saldo = '0'";
    
     $result = mysqli_query($con,$query);
 }else{
@@ -38,7 +37,7 @@ if($foto == ""){
             $query .= "nama = '$nama', ";
             $query .= "no_induk = '$no_induk', ";
             $query .= "kelas = '$kelas', ";
-            $query .= "saldo = '$saldo'";
+            $query .= "saldo = '0'";
     
             $result = mysqli_query($con,$query);
         }
@@ -48,10 +47,16 @@ if($foto == ""){
         echo $error;
         echo "<meta http-equiv='refresh' content='1; url=?hal=data_tambah'>";
     } elseif($query){
-        echo "Berhasil menambahkan data pegawai <b>$nama</b>";
-        echo "<meta http-equiv='refresh' content='1; url=?hal=data'>";
+        echo "<script>
+        window.alert('Data berhasil ditambah');
+        window.location.href='?hal=data';
+        </script>";
     } else {
-        echo "Tidak dapat menyimpan data !<br>";
+        echo "<script>
+        window.alert('Tidak dapat menyimpan data !<br>');
+        </script>";
         echo mysqli_error();
     }
     ?>
+
+
