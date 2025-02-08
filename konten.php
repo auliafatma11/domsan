@@ -13,7 +13,11 @@
         "riwayat",
         "riwayat_tambah",
         "riwayat_insert",
-        "riwayat_hapus"
+        "riwayat_hapus",
+        "tarik_saldo",
+        "tarik_proses",
+        "tabung",
+        "tabung_proses"
     ];
 
     if(isset($_GET['hal'])) {

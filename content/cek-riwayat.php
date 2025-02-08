@@ -22,7 +22,10 @@ if(!defined('INDEX')) die("");
         </div>
         <h1>Riwayat Nasabah</h1>
         <div class="search">
-            <input type="text" placeholder="Search">
+        <form method="GET" action="" style="float: right; margin-bottom: 10px;">
+    <input type="text" name="keyword" placeholder="Search" value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : ''; ?>">
+    <button type="submit">🔍</button>
+</form>
         </div>
         <div class="table-wrapper">
             <table>

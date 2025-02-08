@@ -10,18 +10,12 @@
 <body>
     <div class="container">
         <div class="header">Tambah Data</div>
-        <form action="?hal=data_insert" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label>Foto</label>
-            <input type="file" name="foto" id="foto">
-        </div>
+        <form action="?hal=tarik_proses" method="post" enctype="multipart/form-data">
+                    <!-- Input ID -->
+     <input type="hidden" name="id" value="<?=$data['id_siswa']?>">
         <div class="form-group">
             <label>Nama</label>
-            <input type="text" name="nama" id="nama" required>
-        </div>
-        <div class="form-group">
-            <label>No. Induk</label>
-            <input type="number" name="no_induk" id="no_induk" required>
+            <input type="text" name="nama" id="nama" disabled>
         </div>
         <div class="form-group">
             <label>Kelas</label>
@@ -35,6 +29,16 @@ while($data = mysqli_fetch_assoc($result)) {
 }
 ?>
             </select>   
+        </div>
+
+        <div class="form-group">
+            <label>Nominal</label>
+            <input type="number" name="nominal" id="nominal" required>
+        </div>
+
+        <div class="form-group">
+            <label>Keterangan</label>
+            <input type="keterangan" name="keterangan" id="nominal" style="width:100%" rows="5 required>
         </div>
         <div class="buttons">
             <input type="submit" value="Simpan" class="btn-save"></a>

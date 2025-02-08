@@ -27,7 +27,10 @@
             <a href="?hal=data_tambah" class="add-button">+</a>
       
 <div class="search">
-    <input type="text" placeholder="Search">
+    <form method="GET" action="" style="float: right; margin-bottom: 10px;">
+    <input type="text" name="keyword" placeholder="Search" value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : ''; ?>">
+    <button type="submit">🔍</button>
+</form>
 </div>
 <div class="table-wrapper">
     <table>
@@ -45,7 +48,10 @@
         </thead>
         <tbody>
             <?php
-                $query= "SELECT * FROM data_siswa";
+                $query= "SELECT * FROM data_siswa ";
+                $query.= "LEFT JOIN kelas ";
+                $query.= "ON data_siswa.id_kelas = kelas.id_kelas ";
+                $query.= "ORDER BY data_siswa.id_kelas DESC";
                 $result= mysqli_query($con,$query);
                 $no= 0;
 

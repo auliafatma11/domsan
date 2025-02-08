@@ -10,17 +10,17 @@ $ukuran = $_FILES['foto']['size'];
 $nama = $_POST['nama'];
 $no_induk= $_POST['no_induk'];
 $id_kelas= $_POST['kelas'];
-// $saldo= $_POST['saldo'];
+$saldo =$_POST['saldo'];
 
 $error = "";
 
 if($foto == ""){
-    $query = "INSERT INTO data_siswa SET ";
-    $query .= "foto = '$foto', ";
+    $query = "UPDATE data_siswa SET ";
     $query .= "nama = '$nama', ";
     $query .= "no_induk = '$no_induk', ";
     $query .= "id_kelas = '$id_kelas', ";
-    $query .= "saldo = '0'";
+    $query .= "saldo = '$saldo' ";
+    $query .= "WHERE id_siswa = '$id'";
    
     $result = mysqli_query($con,$query);
 }else{
@@ -36,15 +36,25 @@ if($foto == ""){
                         window.location.href='?hal=data_tambah';
                         </script>";
         } else {
+            // MENGHAPUS FOTO SEBELUMNYA
+            $query = "SELECT * FROM data_siswa WHERE id_siswa = '$id'";
+            $result = mysqli_query($con,$query);
+            $data = mysqli_fetch_assoc($result);
+    
+            if(file_exists("images/$data[foto]")) {
+                unlink("images/$data[foto]");
+            }
+
             $nama_foto = date('YmdHis')."-".$foto;
             move_uploaded_file($lokasi, "images/".$nama_foto);
     
-            $query = "INSERT INTO data_siswa SET ";
+            $query = "UPDATE data_siswa SET ";
             $query .= "foto = '$nama_foto', ";
             $query .= "nama = '$nama', ";
             $query .= "no_induk = '$no_induk', ";
             $query .= "id_kelas = '$id_kelas', ";
-            $query .= "saldo = '0'";
+            $query .= "saldo = '$saldo' ";
+            $query .= "WHERE id_siswa = '$id'";
     
             $result = mysqli_query($con,$query);
         }
@@ -55,12 +65,12 @@ if($foto == ""){
         echo "<meta http-equiv='refresh' content='1; url=?hal=data_tambah'>";
     } elseif($query){
         echo "<script>
-        window.alert('Data berhasil ditambah');
+        window.alert('Data berhasil diperbaharui');
         window.location.href='?hal=data';
         </script>";
     } else {
         echo "<script>
-        window.alert('Tidak dapat menyimpan data !<br>');
+        window.alert('Tidak dapat memperbaharui data !<br>');
         </script>";
         echo mysqli_error();
     }
