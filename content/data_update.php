@@ -6,7 +6,7 @@ $lokasi = $_FILES['foto']['tmp_name'];
 $tipe = $_FILES['foto']['type'];
 $ukuran = $_FILES['foto']['size'];
 
-
+$id= $_POST['id']
 $nama = $_POST['nama'];
 $no_induk= $_POST['no_induk'];
 $id_kelas= $_POST['kelas'];
@@ -62,11 +62,11 @@ if($foto == ""){
 
     if($error != ""){
         echo $error;
-        echo "<meta http-equiv='refresh' content='1; url=?hal=data_tambah'>";
+        // echo "<meta http-equiv='refresh' content='1; url=?hal=data_tambah'>";
     } elseif($query){
         echo "<script>
         window.alert('Data berhasil diperbaharui');
-        window.location.href='?hal=data';
+        // window.location.href='?hal=data';
         </script>";
     } else {
         echo "<script>

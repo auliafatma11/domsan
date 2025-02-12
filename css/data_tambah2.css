@@ -50,6 +50,10 @@ body {
     border-radius: 5px;
 }
 
+.form-group input{
+    margin-bottom: 15px;
+}
+
 .buttons {
     display: flex;
     justify-content: space-between;

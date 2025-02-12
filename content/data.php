@@ -66,8 +66,7 @@
                 <td><?=$data['kelas']?></td>
                 <td><?=$data['saldo']?></td>
                 <td class="bank-buttons">
-                    <a href="?hal=tarik_saldo&id=<?=$data['id_siswa']?>" class="btn-tarik">Tarik</a>
-                    <a href="?hal=tabung_saldo&id=<?=$data['id_siswa']?>" class="btn-tabung">Tabung</a>
+                    <a href="?hal=tariktabung_saldo&id=<?=$data['id_siswa']?>" class="btn-tarik">Transaksi</a>
                     <a href="?hal=riwayat&id=<?=$data['id_siswa']?>" class="btn-riwayat">Riwayat</a>
                 </td>
                 <td class="action-buttons">

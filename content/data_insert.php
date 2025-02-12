@@ -14,13 +14,27 @@ $id_kelas= $_POST['kelas'];
 
 $error = "";
 
+// **🔍 Pengecekan apakah `no_induk` sudah ada**
+$query = "SELECT no_induk FROM data_siswa WHERE no_induk = $no_induk";
+$result = mysqli_query($con,$query);
+$data = mysqli_fetch_assoc($result);
+
+if ($data['no_induk'] > 0) {
+    echo "<script>
+    window.alert('⚠️ No. Induk sudah terdaftar. Silakan gunakan nomor induk lain.');
+    window.location.href='?hal=data_tambah';
+    </script>";
+
+}else{
+
+    
 if($foto == ""){
     $query = "INSERT INTO data_siswa SET ";
     $query .= "foto = '$foto', ";
     $query .= "nama = '$nama', ";
     $query .= "no_induk = '$no_induk', ";
-    $query .= "id_kelas = '$id_kelas', ";
-    $query .= "saldo = '0'";
+    $query .= "id_kelas = '$id_kelas',";
+    // $query .= "saldo = '0'";
    
     $result = mysqli_query($con,$query);
 }else{
@@ -43,12 +57,13 @@ if($foto == ""){
             $query .= "foto = '$nama_foto', ";
             $query .= "nama = '$nama', ";
             $query .= "no_induk = '$no_induk', ";
-            $query .= "id_kelas = '$id_kelas', ";
-            $query .= "saldo = '0'";
+            $query .= "id_kelas = '$id_kelas',";
+            // $query .= "saldo = '0'";
     
             $result = mysqli_query($con,$query);
         }
     }
+}
 
     if($error != ""){
         echo $error;

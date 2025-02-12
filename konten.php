@@ -4,6 +4,8 @@
     $halaman = [
         "dashboard",
         "data",
+        "tambah_admin",
+        "insert_admin",
         "cek-riwayat",
         "data_tambah",
         "data_insert",
@@ -14,7 +16,7 @@
         "riwayat_tambah",
         "riwayat_insert",
         "riwayat_hapus",
-        "tarik_saldo",
+        "tariktabung_saldo",
         "tarik_proses",
         "tabung",
         "tabung_proses"
