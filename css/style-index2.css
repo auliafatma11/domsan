@@ -26,10 +26,19 @@ body {
     margin-right: 30%;
 }
 .saldo {
-    width: 150px;
+    /* width: 150px;
     background: #5CCEFF;
     padding: 10px;
     border-radius: 10px;
+    margin-left: 30%; */
+    font-size: 16px;
+    font-weight: bold;
+    background: #5CCEFF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: right;
     margin-left: 30%;
 }
 .garis-horizontal {

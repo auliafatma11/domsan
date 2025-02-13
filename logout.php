@@ -1,7 +1,9 @@
 <?php
     session_start();
     session_destroy();
-
-    echo "<p align='center'>Anda telah Logout!</p>";
-    echo "<meta http-equiv='refresh' content='1; url=login.php'>";
+    
+    echo "<script>
+    window.alert('Anda telah Logout!');
+    window.location.href='login.php';
+    </script>";
 ?>

@@ -36,7 +36,13 @@
             </div>
             <img src="logo/dom-san.png" alt="DOM-SAN Logo" width="100">
             <div class="saldo">
-                <p><strong>Saldo:</strong></p>
+                <p><strong>Saldo: 
+                <?php 
+                $id_siswa = $_POST['id'];
+                $query = "SELECT saldo FROM data_siswa WHERE id_siswa = $id_siswa";
+                $result = mysqli_query($con, $query);
+                 ?>
+                 </strong></p>
             </div>
     </div>
         <div class="garis-horizontal"></div>
